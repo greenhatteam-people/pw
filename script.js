@@ -27,6 +27,7 @@ fetch(jsonFile)
         const signElement = document.getElementById('sign');
         signElement.textContent = data.sign;
         signElement.style.color = 'white';
+        signElement.style.fontStyle = 'italic';
     })
     .catch(error => {
         console.error('加载图片时出错:', error);
