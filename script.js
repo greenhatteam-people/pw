@@ -22,6 +22,11 @@ fetch(jsonFile)
         const nameElement = document.getElementById('name');
         nameElement.textContent = data.name;
         nameElement.style.color = 'white';
+
+        // sign
+        const signElement = document.getElementById('sign');
+        signElement.textContent = data.sign;
+        signElement.style.color = 'white';
     })
     .catch(error => {
         console.error('加载图片时出错:', error);
