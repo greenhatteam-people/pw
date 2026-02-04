@@ -20,7 +20,8 @@ fetch(jsonFile)
 
         // name
         const nameElement = document.getElementById('name');
-        nameElement.textContent = data.name
+        nameElement.textContent = data.name;
+        nameElement.style.color = 'white';
     })
     .catch(error => {
         console.error('加载图片时出错:', error);
