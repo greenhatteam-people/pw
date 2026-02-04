@@ -1,0 +1,11 @@
+{
+  "id": 1,
+  "name": "cool little bear",
+  "avatarURL": "https://img.greenhat.dpdns.org/avatars/clb.jpg",
+  "age": 114514,
+  "sex": "males",
+  "responsibilities": ["web开发","维护"],
+  "tags": ["二次元"],
+  "links": {"bilibili":"https://space.bilibili.com/3546857082980947","github":"https://github.com/coolLitterBear"},
+  "goals": [{"name":"吃饭","achieved?":true},{"name":"一键三连","achieved?":false}]
+}
