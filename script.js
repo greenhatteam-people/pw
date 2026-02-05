@@ -39,22 +39,19 @@ fetch(jsonFile)
     })
     
 function updatePage(person) {
-    
-}
-    .then(data => {
-        // 创建img元素并设置src
+    // 头像
+    if (person.avatarURL) {
         const img = document.createElement('img');
         img.src = person.avatarURL; // 假设JSON中有imageUrl字段
-        img.alt = person.altText || '图片描述';
-        
-        // 添加到页面
+        img.alt = person.altText || '头像';
+        document.getElementById('avatar').innerHTML = '';
         document.getElementById('avatar').appendChild(img);
 
-        // name
-        const nameElement = document.getElementById('name');
-        nameElement.textContent = person.name;
-        nameElement.style.color = 'white';
-
+    // name
+    if (person.name) {
+        document.getElementById('name').textContent = person.name;
+    }
+    
         // sign
         const signElement = document.getElementById('sign');
         signElement.textContent = person.sign;
@@ -65,4 +62,5 @@ function updatePage(person) {
         console.error('加载图片时出错:', error);
         document.getElementById('avatar').innerHTML = 
             '<p>图片加载失败</p>';
-    });
+    })
+}
