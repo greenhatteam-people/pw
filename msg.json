@@ -3,14 +3,42 @@
     "id": 1,
     "membershipCode": "clb",
     "name": "cool little bear",
+    "multilingualNames": [
+      {
+        "lang": "zh",
+        "value": "最cool的小熊"
+      }
+    ],
     "avatarURL": "https://img.greenhat.dpdns.org/avatars/clb.jpg",
     "sign": "?没人告诉我要写这玩意",
     "age": null,
     "sex": "males",
     "mail": "inorg-clb@greenhat.dpdns.org",
-    "responsibilities": ["web开发","维护"],
-    "tags": ["二次元"],
-    "links": {"bilibili":"https://space.bilibili.com/3546857082980947","github":"https://github.com/coolLitterBear"},
-    "goals": [{"name":"吃饭","achieved?":true},{"name":"一键三连","achieved?":false}]
+    "responsibilities": [
+      "web开发",
+      "维护"
+    ],
+    "tags": [
+      "二次元"
+    ],
+    "links": {
+      "bilibili":"https://space.bilibili.com/3546857082980947",
+      "github":"https://github.com/coolLitterBear"
+    },
+    "goals": [
+      {
+        "value":"吃饭",
+        "achieved?":true
+      },
+      {
+        "value":"一键三连",
+        "achieved?":false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "membershipCode": "moe",
+    "name":
   }
 ]
