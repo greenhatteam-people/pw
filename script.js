@@ -81,7 +81,7 @@ function createTag(value) {
     container.innerHTML = `
         <div style="display: flex; flex-wrap: wrap; gap: 2px;">  <!-- 间隙2px -->
             <div style="
-                background: ${color};
+                background: #1e1e1e;
                 color: white;
                 padding: 3px 5px;      /* 上下3px，左右5px */
                 border-radius: 4px;    /* 小圆角 */
