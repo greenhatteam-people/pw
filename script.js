@@ -76,8 +76,7 @@ function updatePage(person) {
 function createTag(value) {
     let container = document.createElement('div');
     container.style.cssText = `
-        margin: 15px 0;
-        padding: 5px;
+        padding: 0px;
         background: rgba(255,255,255,0.05);
         border-radius: 8px;
     `;
