@@ -5,10 +5,15 @@
     "name": "cool little bear",
     "multilingualNames": [
       {
-        "lang": "zh",
-        "value": "最cool的小熊"
+        "lang": "zh-Hans",
+        "text": "最cool的小熊"
+      },
+      {
+        "lang": "en",
+        "text": "cool little bear"
       }
     ],
+    "namesPrimaryLang": "en",
     "avatarURL": "https://img.greenhat.dpdns.org/avatars/clb.jpg",
     "sign": "?没人告诉我要写这玩意",
     "age": null,
@@ -38,7 +43,20 @@
   },
   {
     "id": 2,
-    "membershipCode": "moe",
-    "name":
+    "membershipCode": "gr-moe",
+    "name": "青萌",
+    "multilingualNames": [
+      {
+        "lang": "zh-Latn",
+        "text": "Qingmeng"
+      },
+      {
+        "lang": "en",
+        "text": "VerdaSprite"
+      },
+      {
+        "lang": "ja-Hani"
+      }
+    ]
   }
 ]
