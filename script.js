@@ -85,7 +85,7 @@ function createTag(value) {
         <div style="
             display: inline-block;
             color: white;
-            padding: 0px 0px;
+            padding: 0px 5px 0px;
             border-radius: 15px;
             font-size: 14px;
         ">${value}</div>
