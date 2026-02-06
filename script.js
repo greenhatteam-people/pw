@@ -76,18 +76,19 @@ function updatePage(person) {
 function createTag(value) {
     let container = document.createElement('div');
     container.style.cssText = `
-        padding: 0px;
-        background: rgba(255,255,255,0.05);
-        border-radius: 8px;
+        margin: 10px 0;
     `;
     container.innerHTML = `
-        <div style="
-            display: inline-block;
-            color: white;
-            padding: 0px 5px 0px;
-            border-radius: 15px;
-            font-size: 14px;
-        ">${value}</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 2px;">  <!-- 间隙2px -->
+            <div style="
+                background: ${color};
+                color: white;
+                padding: 3px 5px;      /* 上下3px，左右5px */
+                border-radius: 4px;    /* 小圆角 */
+                font-size: 13px;
+                line-height: 1.2;
+                ">${value}</div>
+        </div>
     `;
     document.body.appendChild(container);
-} 
+}
