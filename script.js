@@ -1,6 +1,6 @@
 // JSON文件路径
 const jsonFile = 'msg.json';
-let p = 1;
+let p = Math.max(1, parseInt(new URLSearchParams(window.location.search).get('p')) || 1);
 
 // 使用fetch获取JSON数据
 fetch(jsonFile)
