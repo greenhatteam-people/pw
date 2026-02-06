@@ -40,3 +40,9 @@ body {
 #sign {
     font-style: italic;
 }
+
+.tag {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+}

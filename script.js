@@ -51,4 +51,18 @@ function updatePage(person) {
     
     // sign
     document.getElementById('sign').textContent = person.sign || '啥也没有';
+
+    // sex
+    if (person.sex) {
+        if (person.sex == 'male') {
+            createTag('男');
+        } else {
+            createTag('女');
+        }
+    }
+
+    // age
+    if (person.age) {
+        createTag()
+    }
 }
