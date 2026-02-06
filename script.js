@@ -40,27 +40,15 @@ fetch(jsonFile)
     
 function updatePage(person) {
     // 头像
-    if (person.avatarURL) {
-        const img = document.createElement('img');
-        img.src = person.avatarURL; // 假设JSON中有imageUrl字段
-        img.alt = person.altText || '头像';
-        document.getElementById('avatar').innerHTML = '';
-        document.getElementById('avatar').appendChild(img);
+    let img = document.createElement('img');
+    img.src = person.avatarURL || 'https://img.greenhat.dpdns.org/avatars/avatar.png';
+    img.alt = '头像';
+    document.getElementById('avatar').innerHTML = '';
+    document.getElementById('avatar').appendChild(img);
 
     // name
-    if (person.name) {
-        document.getElementById('name').textContent = person.name;
-    }
+    document.getElementById('name').textContent = person.name || '不愿透露姓名';
     
-        // sign
-        const signElement = document.getElementById('sign');
-        signElement.textContent = person.sign;
-        signElement.style.color = 'white';
-        signElement.style.fontStyle = 'italic';
-    })
-    .catch(error => {
-        console.error('加载图片时出错:', error);
-        document.getElementById('avatar').innerHTML = 
-            '<p>图片加载失败</p>';
-    })
+    // sign
+    document.getElementById('sign').textContent = person.sign || '啥也没有';
 }
