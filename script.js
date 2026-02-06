@@ -63,6 +63,32 @@ function updatePage(person) {
 
     // age
     if (person.age) {
-        createTag()
+        let ageText = person.age + '岁';
+        createTag(ageText);
+    }
+
+    // tags
+    if (person.tags && Array.isArray(person.tags)) {
+        createArrayTags(person.tags);
     }
 }
+
+function createTag(value) {
+    let container = document.createElement('div');
+    container.style.cssText = `
+        margin: 15px 0;
+        padding: 15px;
+        background: rgba(255,255,255,0.05);
+        border-radius: 8px;
+    `;
+    container.innerHTML = `
+        <div style="
+            display: inline-block;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 14px;
+        ">${value}</div>
+    `;
+    document.body.appendChild(container);
+} 
