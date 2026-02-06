@@ -47,6 +47,10 @@
     "name": "青萌",
     "multilingualNames": [
       {
+        "lang": "zh-Hans",
+        "text": "青萌"
+      },
+      {
         "lang": "zh-Latn",
         "text": "Qingmeng"
       },
@@ -55,8 +59,28 @@
         "text": "VerdaSprite"
       },
       {
-        "lang": "ja-Hani"
+        "lang": "ja-Hani",
+        "text": "青萌"
+      },
+      {
+        "lang": "ja-Hira",
+        "text": "あおもえ"
+      },
+      {
+        "lang": "ja-Latn",
+        "text": "Aomoe"
+      },
+      {
+        "lang": "ko",
+        "text": "청몽"
+      },
+      {
+        "lang": "ko-Latn",
+        "text": "Cheong-mong"
       }
-    ]
+    ],
+    "namesPrimaryLang": "zh-Hans",
+    "avatarURL": null,
+    "sign": ""
   }
 ]
