@@ -54,11 +54,19 @@ function updatePage(person) {
 
     // sex
     if (person.sex) {
-        if (person.sex == 'male') {
-            createTag('男');
-        } else {
-            createTag('女');
-        }
+        const sexText = (person.sex === 'male' || person.sex === 'males') ? '男' : '女';
+        const sexTag = document.createElement('div');
+        sexTag.textContent = sexText;
+        sexTag.style.cssText = `
+            background: #3498db;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 13px;
+            display: inline-block;
+            margin-right: 5px;
+        `;
+        tagContainer.appendChild(sexTag);
     }
 
     // age
