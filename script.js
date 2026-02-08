@@ -67,7 +67,7 @@ function updatePage(person) {
         sexTag.textContent = sexText;
         sexTag.className = 'tag-item';
         sexTag.style.cssText = `
-            background: #3498db;
+            background: #292929;
             color: white;
             padding: 3px 5px;
             border-radius: 4px;
@@ -87,7 +87,7 @@ function updatePage(person) {
         ageTag.textContent = person.age + '岁';
         ageTag.className = 'tag-item';
         ageTag.style.cssText = `
-            background: #2ecc71;
+            background: #292929;
             color: white;
             padding: 3px 5px;
             border-radius: 4px;
@@ -108,7 +108,7 @@ function updatePage(person) {
             tag.textContent = tagText;
             tag.className = 'tag-item';
             tag.style.cssText = `
-                background: #e74c3c;
+                background: #292929;
                 color: white;
                 padding: 3px 5px;
                 border-radius: 4px;
