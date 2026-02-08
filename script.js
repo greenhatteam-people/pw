@@ -52,51 +52,74 @@ function updatePage(person) {
     // sign
     document.getElementById('sign').textContent = person.sign || '啥也没有';
 
+    // 获取标签容器
+    const tagContainer = document.querySelector('.tag');
+    
+    // 清空容器
+    if (tagContainer) {
+        tagContainer.innerHTML = '';
+    }
+    
     // sex
     if (person.sex) {
-        const sexText = (person.sex === 'male' || person.sex === 'males') ? '男' : '女';
-        const sexTag = document.createElement('div');
+        let sexText = person.sex.toLowerCase().includes('male') ? '男' : '女';
+        const sexTag = document.createElement('span');
         sexTag.textContent = sexText;
+        sexTag.className = 'tag-item';
         sexTag.style.cssText = `
             background: #3498db;
             color: white;
-            padding: 3px 8px;
-            border-radius: 12px;
+            padding: 3px 5px;
+            border-radius: 4px;
             font-size: 13px;
             display: inline-block;
-            margin-right: 5px;
+            margin-right: 2px;
         `;
-        tagContainer.appendChild(sexTag);
+        
+        if (tagContainer) {
+            tagContainer.appendChild(sexTag);
+        }
     }
 
     // age
-    if (person.age) {
-        let ageText = person.age + '岁';
-        createTag(ageText);
+    if (person.age !== null && person.age !== undefined) {
+        const ageTag = document.createElement('span');
+        ageTag.textContent = person.age + '岁';
+        ageTag.className = 'tag-item';
+        ageTag.style.cssText = `
+            background: #2ecc71;
+            color: white;
+            padding: 3px 5px;
+            border-radius: 4px;
+            font-size: 13px;
+            display: inline-block;
+            margin-right: 2px;
+        `;
+        
+        if (tagContainer) {
+            tagContainer.appendChild(ageTag);
+        }
     }
 
     // tags
     if (person.tags && Array.isArray(person.tags)) {
-        createArrayTags(person.tags);
-    }
-}
-
-function createTag(value) {
-    let container = document.createElement('div');
-    container.style.cssText = `
-        margin: 10px 0;
-    `;
-    container.innerHTML = `
-        <div style="display: flex; flex-wrap: wrap; gap: 2px;">  <!-- 间隙2px -->
-            <div style="
-                background: #1e1e1e;
+        person.tags.forEach(tagText => {
+            const tag = document.createElement('span');
+            tag.textContent = tagText;
+            tag.className = 'tag-item';
+            tag.style.cssText = `
+                background: #e74c3c;
                 color: white;
-                padding: 3px 5px;      /* 上下3px，左右5px */
-                border-radius: 4px;    /* 小圆角 */
+                padding: 3px 5px;
+                border-radius: 4px;
                 font-size: 13px;
-                line-height: 1.2;
-                ">${value}</div>
-        </div>
-    `;
-    document.body.appendChild(container);
+                display: inline-block;
+                margin-right: 2px;
+            `;
+            
+            if (tagContainer) {
+                tagContainer.appendChild(tag);
+            }
+        });
+    }
 }
