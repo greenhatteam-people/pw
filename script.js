@@ -1,5 +1,5 @@
 // JSON文件路径
-const jsonFile = 'msg.json';
+let jsonFile = 'msg.json';
 let p = Math.max(1, parseInt(new URLSearchParams(window.location.search).get('p')) || 1);
 
 // 使用fetch获取JSON数据
@@ -22,7 +22,7 @@ fetch(jsonFile)
         }
 
         // 算
-        const personIndex = p - 1;
+        let personIndex = p - 1;
 
         // 对吗?
         if (personIndex < 0 || personIndex >= dataArray.length) {
@@ -30,7 +30,7 @@ fetch(jsonFile)
         }
 
         // get
-        const person = dataArray[personIndex];
+        let person = dataArray[personIndex];
         updatePage(person);
     })
     .catch(error => {
@@ -53,7 +53,7 @@ function updatePage(person) {
     document.getElementById('sign').textContent = person.sign || '啥也没有';
 
     // 获取标签容器
-    const tagContainer = document.querySelector('.tag');
+    let tagContainer = document.querySelector('.tag');
     
     // 清空容器
     if (tagContainer) {
@@ -61,9 +61,13 @@ function updatePage(person) {
     }
     
     // sex
-    if (person.sex) {
-        let sexText = person.sex.toLowerCase().includes('male') ? '男' : '女';
-        const sexTag = document.createElement('span');
+    if (person.sex === 'male' || person.sex === 'female') {
+        if (person.sex === 'male') {
+            let sexText = '男';
+        } else if (person.sex === 'female') {
+            let sexText = '女';
+        }
+        let sexTag = document.createElement('span');
         sexTag.textContent = sexText;
         sexTag.className = 'tag-item';
         sexTag.style.cssText = `
@@ -83,7 +87,7 @@ function updatePage(person) {
 
     // age
     if (person.age !== null && person.age !== undefined) {
-        const ageTag = document.createElement('span');
+        let ageTag = document.createElement('span');
         ageTag.textContent = person.age + '岁';
         ageTag.className = 'tag-item';
         ageTag.style.cssText = `
@@ -104,7 +108,7 @@ function updatePage(person) {
     // tags
     if (person.tags && Array.isArray(person.tags)) {
         person.tags.forEach(tagText => {
-            const tag = document.createElement('span');
+            let tag = document.createElement('span');
             tag.textContent = tagText;
             tag.className = 'tag-item';
             tag.style.cssText = `
