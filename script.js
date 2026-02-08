@@ -69,7 +69,7 @@ function updatePage(person) {
         sexTag.style.cssText = `
             background: #292929;
             color: white;
-            padding: 3px 5px;
+            padding: 5px 10px;
             border-radius: 4px;
             font-size: 13px;
             display: inline-block;
@@ -89,7 +89,7 @@ function updatePage(person) {
         ageTag.style.cssText = `
             background: #292929;
             color: white;
-            padding: 3px 5px;
+            padding: 5px 10px;
             border-radius: 4px;
             font-size: 13px;
             display: inline-block;
@@ -110,7 +110,7 @@ function updatePage(person) {
             tag.style.cssText = `
                 background: #292929;
                 color: white;
-                padding: 3px 5px;
+                padding: 5px 10px;
                 border-radius: 4px;
                 font-size: 13px;
                 display: inline-block;
