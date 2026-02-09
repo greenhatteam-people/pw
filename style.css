@@ -41,8 +41,9 @@ body {
     margin: 0px;
 }
 
-#sign {
+.sign {
     font-style: italic;
+    margin: 10px 0px 16px
 }
 
 .tag {
