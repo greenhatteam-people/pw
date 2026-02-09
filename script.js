@@ -52,6 +52,9 @@ function updatePage(person) {
     // sign
     document.getElementById('sign').textContent = person.sign || '啥也没有';
 
+    // mail-address
+    document.getElementById('mail-address').textContent.Content = person.mail ||'inorg-' + person.membershipCode + '@greenhat.dpdns.org';
+
     // 获取标签容器
     let tagContainer = document.querySelector('.tag');
     
