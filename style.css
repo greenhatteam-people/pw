@@ -1,6 +1,5 @@
 * {
     color: white;
-    margin: 0px;
 }
 
 body {
@@ -39,7 +38,7 @@ body {
 }
 
 .name {
-    margin-bottom: 16px 0px !important;
+    margin: 0px;
 }
 
 #sign {
