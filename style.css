@@ -51,8 +51,12 @@ body {
     gap: 10px;
 }
 
+.mail-icon {
+    margin-top: 1px;
+}
+
 .mail-address {
-    margin: 0px;
+    margin: 0px 0px 1px;
 }
 
 .tag {
