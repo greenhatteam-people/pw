@@ -43,10 +43,11 @@ body {
 
 .sign {
     font-style: italic;
-    margin: 5px 0px 16px
+    margin: 5px 0px 0px;
 }
 
 .mail {
+    margin: 10px 0px;
     display: flex;
     gap: 10px;
 }
