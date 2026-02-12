@@ -26,10 +26,16 @@
     "tags": [
       "二次元"
     ],
-    "links": {
-      "bilibili":"https://space.bilibili.com/3546857082980947",
-      "github":"https://github.com/coolLitterBear"
-    },
+    "links": [
+      {
+        "type": "bilibili",
+        "link": "https://space.bilibili.com/3546857082980947"
+      },
+      {
+        "type": "github",
+        "link": "https://github.com/coolLitterBear"
+      }
+    ],
     "goals": [
       {
         "value":"吃饭",
