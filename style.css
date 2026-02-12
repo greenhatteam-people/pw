@@ -46,6 +46,17 @@ body {
     margin: 5px 0px 0px;
 }
 
+.mail {
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mail-icon {
+    flex-shrink: 0;
+}
+
 .tag {
     display: flex;
     gap: 10px;
