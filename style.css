@@ -6,7 +6,7 @@ body {
     background-color: #1e1e1e;
 }
 
-.basic {
+.header {
     display: flex;
     gap: 30px;
 }
