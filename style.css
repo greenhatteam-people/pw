@@ -47,7 +47,7 @@ body {
 }
 
 .mail {
-    margin: 10px 0px;
+    margin: 10px 0px 12px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -55,6 +55,10 @@ body {
 
 .mail-icon {
     flex-shrink: 0;
+}
+
+.mail-address {
+    margin: 0px;
 }
 
 .tag {
