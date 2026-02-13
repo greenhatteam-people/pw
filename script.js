@@ -141,4 +141,18 @@ function updatePage(person) {
             responsibilityDiv.appendChild(p);
         }
     }
+
+    // goal
+    let goalDiv = document.getElementById('goal');
+    goalDiv.innerHTML = '';
+    if (person.goals && Array.isArray(person.goals) && person.goals.length > 0) {
+        for (let i = 0; i < person.goals.length; i++) {
+            let p = document.createElement('p');
+            p.textContent = person.goals[i].value;
+            if (person.goals[i]["achieved?"]) {
+                p.style.textDecoration = 'line-through';
+            }
+            goalDiv.appendChild(p);
+        }
+    }
 }
