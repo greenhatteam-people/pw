@@ -130,4 +130,15 @@ function updatePage(person) {
             }
         });
     }
+
+    // responsibility
+    let responsibilityDiv = document.getElementById('responsibility');
+    responsibilityDiv.innerHTML = '';
+    if (person.responsibilities && Array.isArray(person.responsibilities) && person.responsibilities.length > 0) {
+        for (let i = 0; i < person.responsibilities.length; i++) {
+            let p = document.createElement('p');
+            p.textContent = person.responsibilities[i];
+            responsibilityDiv.appendChild(p);
+        }
+    }
 }
