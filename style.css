@@ -67,6 +67,10 @@ body {
     flex-wrap: nowrap;
 }
 
-.detail {
+.details {
     margin: 50px 100px;
+}
+
+.detail-text p {
+    margin: 0px 5px;
 }
